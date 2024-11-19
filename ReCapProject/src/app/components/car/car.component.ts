@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './car.component.css'
 })
 export class CarComponent {
-
+//deneme
 }
