@@ -6,6 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 import { NaviComponent } from './components/navi/navi.component';
+import { BrandComponent } from './components/brand/brand.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { RentalComponent } from './components/rental/rental.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { NaviComponent } from './components/navi/navi.component';
     BrowserModule,
     AppRoutingModule,
     NaviComponent,
+    BrandComponent,
+    CustomerComponent,
+    RentalComponent,
     HttpClientModule,
     
     

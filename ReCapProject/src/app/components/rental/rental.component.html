@@ -1,0 +1,26 @@
+
+
+<h4 class = "text-bg-light p-1  mt-3 fs-4" >KİRALAMALAR</h4>
+
+  <table  cellpadding="10" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor = "let rental of rentals">
+        <td>{{rental.brandName}}</td>
+        <td>{{rental.customerName}}</td>
+        <td>{{rental.rentDate}}</td>
+        <td>{{rental.returnDate}}</td>
+        
+        
+      </tr>
+     
+     
+    </tbody>
+  </table>

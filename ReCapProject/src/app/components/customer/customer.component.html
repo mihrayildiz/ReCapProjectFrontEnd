@@ -1,0 +1,23 @@
+
+<h4 class = "text-bg-light p-1  mt-3 fs-4" >MÜŞTERİLER</h4>
+
+  <table  cellpadding="10" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor = "let customer of customers">
+        <td>{{customer.companyName}}</td>
+        <td>{{customer.firstName}}</td>
+        <td>{{customer.lastName}}</td>
+        
+      </tr>
+     
+     
+    </tbody>
+  </table>
