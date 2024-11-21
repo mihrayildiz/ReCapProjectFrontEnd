@@ -1,1 +1,27 @@
-<p>car works!</p>
+
+
+<h4 class = "text-bg-light p-1  mt-3 fs-4 bg-success-subtle ortala"  >CARS</h4>
+
+  <table  cellpadding="10" cellspacing="0">
+    <thead>
+      <tr class = "head">
+        <th>Car</th>
+        <th>Brand</th>
+        <th>Color</th>
+        <th>Daily Price</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor = "let car of cars">
+    
+        <td>{{car.carName}}</td>
+        <td>{{car.brandName}}</td>
+        <td>{{car.colorName}}</td>
+        <td>{{car.dailyPrice}}</td>
+        
+      </tr>
+     
+     
+    </tbody>
+  </table>

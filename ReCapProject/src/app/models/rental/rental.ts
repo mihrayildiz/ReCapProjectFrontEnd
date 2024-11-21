@@ -2,7 +2,7 @@ export interface Rental
 {
     brandName : string;
     customerName : string;
-    rentDate : Date;
+    rentDate : string;
     returnDate : Date;
 
 

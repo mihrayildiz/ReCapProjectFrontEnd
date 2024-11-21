@@ -4,7 +4,7 @@
 
   <table  cellpadding="10" cellspacing="0">
     <thead>
-      <tr>
+      <tr class ="head">
         <th>Brand Name</th>
         <th>Name</th>
         <th>Rent Date</th>
@@ -15,8 +15,8 @@
       <tr  *ngFor = "let rental of rentals">
         <td>{{rental.brandName}}</td>
         <td>{{rental.customerName}}</td>
-        <td>{{rental.rentDate}}</td>
-        <td>{{rental.returnDate}}</td>
+        <td>{{rental.rentDate | date:'dd/MM/yyyy' }}</td>
+        <td>{{rental.returnDate | date:'dd/MM/yyyy' }}</td>
         
         
       </tr>
