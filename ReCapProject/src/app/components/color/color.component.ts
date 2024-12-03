@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import { Color } from '../../models/color';
-import { ColorService } from '../../services/color.service';
+import { Color } from '../../models/color/color';
+import { ColorService } from '../../services/color/color.service';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
