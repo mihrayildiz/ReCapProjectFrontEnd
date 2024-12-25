@@ -5,9 +5,7 @@ import { CarComponent } from './components/car/car.component';
 
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
-  {path:"",pathMatch:"full", component:CarComponent},
-  {path:"cars", component:CarComponent},
+ 
   // Diğer yönlendirmeler buraya eklenebilir
 ];
 

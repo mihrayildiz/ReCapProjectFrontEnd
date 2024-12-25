@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { Brand } from '../../models/brand/brand';
 import { BrandService } from '../../services/brand/brand.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-brand',
