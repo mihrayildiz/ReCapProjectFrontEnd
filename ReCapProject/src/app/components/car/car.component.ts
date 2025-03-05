@@ -4,17 +4,22 @@ import { Car } from '../../models/car/car';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { response } from 'express';
+import { VatAddedPipe } from '../../../pipes/vat-added.pipe';
+import { FilterPipePipe } from '../../../pipes/filter-pipe.pipe';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-car',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,VatAddedPipe,FilterPipePipe,FormsModule],
   templateUrl: './car.component.html',
   styleUrl: './car.component.css'
 })
 export class CarComponent implements OnInit{
  
   cars : Car[] =[];
+  filterText = "";
 
   constructor(private carService :CarService, private activatedRouted : ActivatedRoute){ }
 

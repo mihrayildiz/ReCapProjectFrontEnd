@@ -1,5 +1,15 @@
 
 
+<!--Search-->
+<div class="mb-3">
+  <label for="filterText" class="form-label">Search Car</label>
+  <input type="text"  [(ngModel)]  = "filterText"  class="form-control" id="filterText" placeholder="search car">
+</div>
+
+<div *ngIf="filterText">
+  {{filterText}} aradınız.
+</div>
+
 <h4 class = "text-bg-light p-1  mt-3 fs-4 bg-success-subtle ortala"  >CARS</h4>
 
   <table  cellpadding="10" cellspacing="0">
@@ -9,19 +19,30 @@
         <th>Brand</th>
         <th>Color</th>
         <th>Daily Price</th>
+        <th>Daily Price - KDV</th>
       
       </tr>
     </thead>
     <tbody>
-      <tr  *ngFor = "let car of cars">
+      <tr  *ngFor = "let car of cars | filterPipe : filterText">
     
         <td>{{car.carName}}</td>
         <td>{{car.brandName}}</td>
-        <td>{{car.colorName}}</td>
+        <td>{{car.colorName | uppercase}}</td>
         <td>{{car.dailyPrice}}</td>
+        <td>{{car.dailyPrice | vatAdded : 10}}</td>
         
       </tr>
      
      
     </tbody>
   </table>
+
+
+
+
+  <!--
+  [(ngModel)] Ne İşe Yarar?
+Kullanıcının input kutusuna yazdığı değer otomatik olarak filterText değişkenine atanır.
+filterText değişkeninin değeri değişirse, input kutusunda da güncellenir.
+Yani, hem veriyi bileşene (filterText) aktarır hem de bileşendeki değişiklikleri input'a yansıtır (Two-Way Binding).-->
